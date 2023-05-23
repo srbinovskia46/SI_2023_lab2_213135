@@ -21,17 +21,17 @@ class SILab2Test {
                 new User("username", "password46!", "email@test.com")))));
 
         //3
-        assertFalse(SILab2.function(new User("username", "password46!", "email@test.com"),
+        assertFalse(SILab2.function(new User("user", "password46#", "email"),
                 new ArrayList<User>(List.of(new User("username1", "passwordNekoj", "valid@finki.com"),
                         new User("username", "password46!", "email@test.com")))));
 
         //4
-        assertFalse(SILab2.function(new User("username", "password 46!", "emailtest.com"),
+        assertFalse(SILab2.function(new User("user", "password 46", "email@test.com"),
                 new ArrayList<User>(List.of(new User("username1", "passwordNekoj", "valid@finki.com"),
-                        new User("username", "password 46!", "emailtest.com")))));
+                        new User("user", "password46!", "email@test.com")))));
 
         //5
-        assertTrue(SILab2.function(new User("username", "password46!", "email@test.com"),
+        assertFalse(SILab2.function(new User("user", "password46", "email@test.com"),
                 new ArrayList<User>(List.of(new User("username1", "passwordNekoj", "valid@finki.com"),
                         new User("username3", "passwordNekojTret", "valid@finki.ukim.mk"),
                         new User("username80", "password46!80", "email@test.com.mk")))));
